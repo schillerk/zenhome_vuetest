@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zenysis</title>
+  <!-- Search Engine -->
+  <meta name="description" content="We build the software that governments and international organizations need to confront some of the biggest challenges facing humanity. ">
+  <meta name="image" content="http://www.zenysis.com/pictures/mapright.jpg">
+  <!-- Schema.org for Google -->
+  <meta itemprop="name" content="Zenysis Technologies">
+  <meta itemprop="description" content="We build the software that governments and international organizations need to confront some of the biggest challenges facing humanity. ">
+  <meta itemprop="image" content="http://www.zenysis.com/pictures/mapright.jpg">
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Zenysis Technologies">
+  <meta name="twitter:description" content="We build the software that governments and international organizations need to confront some of the biggest challenges facing humanity. ">
+  <meta name="twitter:site" content="@zenysis">
+  <meta name="twitter:creator" content="@zenysis">
+  <meta name="twitter:image:src" content="http://www.zenysis.com/pictures/mapright.jpg">
+  <!-- Open Graph general (Facebook, Pinterest & Google+) -->
+  <meta name="og:title" content="Zenysis Technologies">
+  <meta name="og:description" content="We build the software that governments and international organizations need to confront some of the biggest challenges facing humanity. ">
+  <meta name="og:image" content="http://www.zenysis.com/pictures/mapright.jpg">
+  <meta name="og:url" content="http://www.zenysis.com/">
+  <meta name="og:site_name" content="Zenysis Technologies">
+  <meta name="og:type" content="website">
+  <!-- Styling -->
+  <link href="custom.css" rel="stylesheet" type="text/css">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Coda:200,300,400,600,700,900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700" rel="stylesheet">
+  <!-- Grid Framework -->
+  <link rel="stylesheet" href="https://unpkg.com/purecss@0.6.1/build/pure-min.css" integrity="sha384-CCTZv2q9I9m3UOxRLaJneXrrqKwUNOzZ6NGEUMwHtShDJ+nCoiXJCAgi05KfkLGY" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@0.6.1/build/grids-responsive-min.css">
+  <!-- Vue -->
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+</head>
+<body>
+  <div id="app">
+    <!-- from https://codepen.io/designcouch/pen/Atyop -->
+    <!-- and https://codepen.io/vladaoleynik/pen/vExKxJ -->
+    <input type="checkbox" id="op"></input>
+    <div class="lower">
+      <label for="op">
+        <div id="nav-icon2">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </label>
+    </div>
+    <div class="overlay overlay-hugeinc">
+      <label for="op"></label>
+      <nav>
+        <ul>
+          <li><a href="index.html" class="menu" id="home">HOME</a></li>
+          <li><a href="background.html" class="menu" id="product">GOVERNMENT</a></li>
+          <li><a href="solution.html" class="menu" id="capabilities">SOLUTION</a></li>
+          <li><a href="implementation.html" class="menu" id="implementation">IMPLEMENTATION</a></li>
+          <li><a href="careers.html" class="menu" id="careers">CAREERS</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="header-buffer"></div>
+    <div class="header-wrap" id="testEl">
+      <div class="header">
+        <a class="logo" href="index.html">
+          ZENYSIS
+        </a>
+        <div v-cloak v-for="page in pages" class="title-inner-test">
+          <div class="title-menu-test" v-on:click="change(page)"><h6 class="dissapear">{{ page }}</h6></a></div>
+        </div>
+      </div>
+    </div>
+    <span v-if="home">
+      <left-big-text
+        title="IMPACT DRIVEN TECHNOLOGY"
+        text="We build software that integrate and analyze fragmented health information systems.<br></br>
+          Our tools empower decision-makers to contextualize their data, catalyze meaningful breakthroughs in performance, and respond to national-scale humanitarian emergencies with unpredencented speed."
+      ></left-big-text>
+      <div class="maybe-center">
+        <vue-button
+          link="background.html"
+          classing="btn-fill"
+          text="CONTACT US">
+        </vue-button>
+        <vue-button
+          link="background.html"
+          text="LEARN MORE">
+        </vue-button>
+      </div>
+      <big-image
+        title="BRING DATA TO GLOBAL&nbsp;HEALTH"
+        text="Uncover insights to catalyze major breakthroughs in health system performance."
+        img="heat"
+      ></big-image>
+      <div class="features">
+        <div class="pure-g">
+          <div class="feature-col pure-u-lg-1-3">
+            <icon img="integrations"></icon>
+            <tile-text
+              title="Custom Integrations"
+              text="Our engineers work on a case-by-case basis to integrate data from existing health information systems into a unified view of an entire nation's health sector."
+            ></tile-text>
+          </div>
+          <div class="feature-col pure-u-lg-1-3">
+            <icon img="analytics"></icon>
+            <tile-text
+              title="Powerful Analytics"
+              text="Our visualization and transformation tools levelrage time-series, geospatial and statistical insights to empower health analysts."
+            ></tile-text>
+          </div>
+          <div class="feature-col pure-u-lg-1-3">
+            <icon img="teams"></icon>
+            <tile-text
+              title="Embedded Teams"
+              text="We invest seriously in building sustainable capacity at every stage of implementation, and always scope deployments with the long-term goal of full local ownership."
+            ></tile-text>
+          </div>
+        </div>
+      </div>
+      <div class="center">
+        <vue-button
+          link="background.html"
+          classing="btn-fill"
+          text="CONTACT US">
+        </vue-button>
+        <vue-button
+          link="background.html"
+          text="LEARN MORE">
+        </vue-button>
+      </div>
+    </span>
+    <div v-if="careers">
+      <left-big-text
+        title="SLEEP LESS. ACHIEVE&nbspMORE."
+        text="We've made extraordinary progress in our first year: our software is already helping governments meet the challenge of providing lifesaving healthcare to more than 100 million people.<br></br>
+        Now we're looking for exceptional people who can help us reach the next billion and beyond."
+      ></left-big-text>
+      <div class="images">
+        <div class="pure-g">
+          <div class="pure-u-md-1-2 pure-u-lg-1-4">
+            <tile-image img="pictures/biruk.jpg"></tile-image>
+          </div>
+          <div class="pure-u-md-1-2 pure-u-lg-1-4">
+            <tile-image img="pictures/anteneh.jpg"></tile-image>
+          </div>
+          <div class="pure-u-md-1-2 pure-u-lg-1-4">
+            <tile-image img="pictures/clay.jpg"></tile-image>
+          </div>
+          <div class="pure-u-md-1-2 pure-u-lg-1-4">
+            <tile-image img="pictures/ian.jpg"></tile-image>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div v-if="diversity">
+      <center-big-text
+        text="Dear All, It is very, very important that you login to Zenefits before EOD on Friday to proceed with open enrollment for dental and vision only. Disregard the medical option for now (the medical plan will be changed and that open enrollment for medical will occur in the next few weeks)."
+        attribution="– Jonathan Stambolis, CEO"
+        shouldcenter="true"
+      ></center-big-text>
+      <div class="features">
+        <div class="pure-g">
+          <div class="feature-col pure-u-lg-1-3">
+            <tile-text
+              title="Campus Recruiting"
+              text="Our engineers work on a case-by-case basis to integrate data from existing health information systems into a unified view of an entire nation's health sector."
+            ></tile-text>
+          </div>
+          <div class="feature-col pure-u-lg-1-3">
+            <tile-text
+              title="Powerful Analytics"
+              text="Our visualization and transformation tools levelrage time-series, geospatial and statistical insights to empower health analysts."
+            ></tile-text>
+          </div>
+          <div class="feature-col pure-u-lg-1-3">
+            <tile-text
+              title="Embedded Teams"
+              text="We invest seriously in building sustainable capacity at every stage of implementation, and always scope deployments with the long-term goal of full local ownership."
+            ></tile-text>
+          </div>
+        </div>
+      </div>
+    </div>
+    <v-footer></v-footer>
+  </div>
+  <script>
+
+    Vue.component('tile-image', {
+      props: ['img'],
+      template: `<img class="pure-img" :src="img">`
+    })
+
+    Vue.component('center-big-text', {
+      props: ['title', 'text', 'attribution'],
+      template: `
+        <div class="title-wrap-centered">
+          <h2 class="big-title" v-html="title"></h2>
+          <h5 class="paragraph" v-html="text"></h5>
+          <h6 class="attribution" v-html="attribution"></h6>
+        </div>`
+    })
+
+    Vue.component('left-big-text', {
+      props: ['title', 'text', 'shouldcenter'],
+      template: `
+        <div class="title-wrap" v-bind:class="{ centered: shouldcenter }">
+          <h2 v-html="title"></h2>
+          <h5 class="paragraph" v-html="text">
+          </h5>
+        </div>`
+    })
+
+    Vue.component('big-image', {
+      props: ['title', 'text', 'img'],
+      template: `
+        <div class="image-wrap">
+          <div class="image" v-bind:class="img"></div>
+          <div class="heat-text">
+            <span v-html="title"></span>
+            <div class="heat-subtext">{{ text }}</div>
+          </div>
+        </div>`
+    })
+
+    Vue.component('tile-text', {
+      props: ['title', 'text'],
+      template: `
+        <div class="icon-text">
+          <div class="icon-text-bold">
+            {{ title }}
+          </div>
+            {{ text }}
+        </div>
+      `
+    })
+
+    Vue.component('icon', {
+      props: ['img'],
+      template: `
+        <div class="icon-wrap">
+          <div class="icon" v-bind:class="img"></div>
+        </div>
+      `
+    })
+
+    Vue.component('vue-button', {
+      props: ['text', 'classing', 'link'],
+      template: `<a :href="link" class="btn" :class="classing">{{ text }}</a>`
+    })
+
+    Vue.component('v-footer', {
+      template:
+        `<span>
+          <div class="footer">
+            <div class="pure-g footer-inner">
+              <div class="pure-u-1 pure-u-sm-1-2 pure-u-md-1-2 pure-u-lg-1-4">
+                <div class="footer-col-text">
+                  About
+                  <div class="footer-col-links">
+                    <p><a href="https://www.linkedin.com/company/zenysis-technologies/">Partnerships</a></p>
+                    <p><a href="https://www.linkedin.com/company/zenysis-technologies/">Solutions</a></p>
+                    <p><a href="https://www.linkedin.com/search/results/people/?facetCurrentCompany=%5B%2218000926%22%5D">Team</a></p>
+                    <p><a href="https://www.linkedin.com/company/zenysis-technologies/">Implementation</a></p>
+                  </div>
+                </div>
+              </div>
+              <div class="pure-u-1 pure-u-sm-1-2 pure-u-md-1-2 pure-u-lg-1-4">
+                <div class="footer-col-text">
+                  Products
+                  <div class="footer-col-links">
+                    <p><a href="https://www.linkedin.com/company/zenysis-technologies/">Interactive Analytics</a></p>
+                    <p><a href="https://www.linkedin.com/company/zenysis-technologies/">Predictive Modeling</a></p>
+                    <p><a href="https://www.linkedin.com/company/zenysis-technologies/">Interoperability</a></p>
+                  </div>
+                </div>
+              </div>
+              <div class="pure-u-1 pure-u-sm-1-2 pure-u-md-1-2 pure-u-lg-1-4">
+                <div class="footer-col-text">
+                  Life at Zenysis
+                  <div class="footer-col-links">
+                    <p><a href="https://www.linkedin.com/company/zenysis-technologies/">Careers</a></p>
+                    <p><a href="https://www.linkedin.com/company/zenysis-technologies/">Diversity and Inclusion</a></p>
+                    <p><a href="https://www.linkedin.com/company/zenysis-technologies/">Open Roles</a></p>
+                    <p><a href="https://www.linkedin.com/company/zenysis-technologies/">Interviewing</a></p>
+                    <p><a href="https://www.linkedin.com/company/zenysis-technologies/">Students</a></p>
+                  </div>
+                </div>
+              </div>
+              <div class="pure-u-1 pure-u-sm-1-2 pure-u-md-1-2 pure-u-lg-1-4">
+                <div class="footer-col-text">
+                  Contact
+                  <div class="footer-col-links">
+                    <p>San Francisco, CA</p>
+                    <p><a href="mailto:info@zenysis.com">info@zenysis.com</a></p>
+                    <p><a href="https://www.linkedin.com/company/zenysis-technologies/">Linkedin</a></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="legal-inner">
+            © Copyright 2018 Zenysis Technologies
+            <a class="logo" href="index.html">
+              ZENYSIS
+            </a>
+          </div>
+        </span>`
+    })
+
+    const app = new Vue({
+      el: '#app',
+      data: {
+        home: false,
+        careers: false,
+        diversity: true,
+        pages: ["home", "government", "solution", "implementation", "careers"],
+      },
+      methods: {
+        change: function(s) {
+          this.home = false;
+          this.careers = false;
+          this.diversity = false;
+          this[s] = true;
+          window.scrollTo(0, 0);
+        },
+        handleScroll (event) {
+          var nav = document.getElementById('testEl');
+          if ( window.pageYOffset > 50 ) {
+              nav.classList.add("testElClass1");
+          } else {
+              nav.classList.remove("testElClass1");
+          }
+          var navIcon = document.getElementById('nav-icon2');
+          if ( window.pageYOffset > 50 ) {
+              navIcon.classList.add("nav-icon-color");
+          } else {
+              navIcon.classList.remove("nav-icon-color");
+          }
+        }
+      },
+      created () {
+        window.addEventListener('scroll', this.handleScroll);
+      },
+      destroyed () {
+        window.removeEventListener('scroll', this.handleScroll);
+      },
+    })
+  </script>
+</body>
